@@ -1,0 +1,9 @@
+c:\users\jon\documents\visual studio 2012\Projects\Monopoly Bank\Monopoly Bank\bin\Debug\Monopoly Bank.exe.config
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\bin\Debug\Monopoly Bank.exe
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\bin\Debug\Monopoly Bank.pdb
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.csprojResolveAssemblyReference.cache
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly_Bank.Form1.resources
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly_Bank.Properties.Resources.resources
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.csproj.GenerateResource.Cache
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.exe
+C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.pdb
