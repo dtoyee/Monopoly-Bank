@@ -25,10 +25,23 @@ namespace Monopoly_Bank
         {
             if (txtAddPlayer.Text.Trim() != "")
             {
-                playerList.Add(new Player(txtAddPlayer.Text, 100));
-                lbPlayers.Items.Add(txtAddPlayer.Text);
+                if (!(lbPlayers.Items.Contains(txtAddPlayer.Text)))
+                {
+                    playerList.Add(new Player(txtAddPlayer.Text, 100));
+                    lbPlayers.Items.Add(txtAddPlayer.Text);
+                    cbPlayerList.Items.Add(txtAddPlayer.Text);
+                    cbPlayerListPay.Items.Add(txtAddPlayer.Text);
 
-                txtAddPlayer.Clear();
+                    txtConsole.AppendText(txtAddPlayer.Text + " has joined the game. " + DateTime.Now.ToString("h:mm tt") + "\n");
+
+                    txtAddPlayer.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("That username is already taken!");
+
+                    txtAddPlayer.Clear();
+                }
             }
             else
             {
@@ -40,12 +53,51 @@ namespace Monopoly_Bank
         {
             string selected = lbPlayers.GetItemText(lbPlayers.SelectedItem);
 
-            foreach(Player selectedPlayer in playerList)
+            foreach (Player selectedPlayer in playerList)
             {
                 if (selectedPlayer.playerName == selected)
                 {
-                    MessageBox.Show(selectedPlayer.playerName + selectedPlayer.playerMoney);
+                    // Load the selected player's information
+                    txtBalance.Text = selectedPlayer.playerMoney.ToString();
+                    
                     break;
+                }
+            }
+        }
+
+        private void btnDeletePlayer_Click(object sender, EventArgs e)
+        {
+            string selectedItem = cbPlayerList.GetItemText(cbPlayerList.SelectedItem);
+
+            foreach (Player selectedPlayer in playerList)
+            {
+                if (selectedPlayer.playerName == selectedItem)
+                {
+                    playerList.Remove(selectedItem);
+                    lbPlayers.Items.Remove(selectedItem);
+                    cbPlayerList.Items.Remove(selectedItem);
+                    cbPlayerListPay.Items.Remove(selectedItem);
+
+                    txtConsole.AppendText(selectedItem + " has left the game. " + DateTime.Now.ToString("h:mm tt") + "\n");
+                    
+                    break;
+                }
+            }
+        }
+
+        private void btnPayPlayer_Click(object sender, EventArgs e)
+        {
+            string selected = lbPlayers.GetItemText(lbPlayers.SelectedItem);
+            string selectedPlayerPay = cbPlayerListPay.GetItemText(cbPlayerListPay.SelectedItem);
+
+            foreach (Player selectedPlayer in playerList)
+            {
+                if(selectedPlayerPay == selectedPlayer.playerName){
+                    selectedPlayer.playerMoney += int.Parse(txtPayAmount.Text);
+
+                    txtConsole.AppendText(selected + " sent " + selectedPlayerPay + " " + txtPayAmount.Text + "\n");
+
+                    txtPayAmount.Text = "";
                 }
             }
         }
