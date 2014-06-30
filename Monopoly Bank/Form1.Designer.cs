@@ -45,11 +45,22 @@
             this.cbPlayerListPay = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnPassGo = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnSetPassGoAmount = new System.Windows.Forms.Button();
+            this.txtPassGoAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnSetStartingMoney = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtStartingMoneyAmount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTimesPassedGo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbPlayers
@@ -133,19 +144,21 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtTimesPassedGo);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtBalance);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(262, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(269, 55);
+            this.groupBox3.Size = new System.Drawing.Size(269, 93);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Player Bank";
+            this.groupBox3.Text = "Player";
             // 
             // txtBalance
             // 
             this.txtBalance.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtBalance.Location = new System.Drawing.Point(60, 20);
+            this.txtBalance.Location = new System.Drawing.Point(102, 20);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.ReadOnly = true;
             this.txtBalance.Size = new System.Drawing.Size(73, 20);
@@ -166,9 +179,9 @@
             this.groupBox4.Controls.Add(this.txtPayAmount);
             this.groupBox4.Controls.Add(this.cbPlayerListPay);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(262, 75);
+            this.groupBox4.Location = new System.Drawing.Point(261, 112);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(269, 168);
+            this.groupBox4.Size = new System.Drawing.Size(269, 131);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Player Bank";
@@ -177,7 +190,7 @@
             // 
             this.btnPayPlayer.Location = new System.Drawing.Point(187, 16);
             this.btnPayPlayer.Name = "btnPayPlayer";
-            this.btnPayPlayer.Size = new System.Drawing.Size(75, 23);
+            this.btnPayPlayer.Size = new System.Drawing.Size(75, 20);
             this.btnPayPlayer.TabIndex = 8;
             this.btnPayPlayer.Text = "Send";
             this.btnPayPlayer.UseVisualStyleBackColor = true;
@@ -209,27 +222,114 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnPassGo);
             this.groupBox5.Location = new System.Drawing.Point(538, 13);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 120);
+            this.groupBox5.Size = new System.Drawing.Size(239, 120);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Banker";
             // 
+            // btnPassGo
+            // 
+            this.btnPassGo.Location = new System.Drawing.Point(10, 78);
+            this.btnPassGo.Name = "btnPassGo";
+            this.btnPassGo.Size = new System.Drawing.Size(223, 36);
+            this.btnPassGo.TabIndex = 7;
+            this.btnPassGo.Text = "Pass Go";
+            this.btnPassGo.UseVisualStyleBackColor = true;
+            this.btnPassGo.Click += new System.EventHandler(this.btnPassGo_Click);
+            // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnSetPassGoAmount);
+            this.groupBox6.Controls.Add(this.txtPassGoAmount);
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Controls.Add(this.btnSetStartingMoney);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.txtStartingMoneyAmount);
             this.groupBox6.Location = new System.Drawing.Point(538, 140);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 103);
+            this.groupBox6.Size = new System.Drawing.Size(239, 103);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Settings";
+            // 
+            // btnSetPassGoAmount
+            // 
+            this.btnSetPassGoAmount.Location = new System.Drawing.Point(158, 46);
+            this.btnSetPassGoAmount.Name = "btnSetPassGoAmount";
+            this.btnSetPassGoAmount.Size = new System.Drawing.Size(75, 20);
+            this.btnSetPassGoAmount.TabIndex = 5;
+            this.btnSetPassGoAmount.Text = "Set";
+            this.btnSetPassGoAmount.UseVisualStyleBackColor = true;
+            this.btnSetPassGoAmount.Click += new System.EventHandler(this.txtSetPassGoAmount_Click);
+            // 
+            // txtPassGoAmount
+            // 
+            this.txtPassGoAmount.Location = new System.Drawing.Point(95, 46);
+            this.txtPassGoAmount.Name = "txtPassGoAmount";
+            this.txtPassGoAmount.Size = new System.Drawing.Size(56, 20);
+            this.txtPassGoAmount.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Pass Go Amount";
+            // 
+            // btnSetStartingMoney
+            // 
+            this.btnSetStartingMoney.Location = new System.Drawing.Point(158, 20);
+            this.btnSetStartingMoney.Name = "btnSetStartingMoney";
+            this.btnSetStartingMoney.Size = new System.Drawing.Size(75, 20);
+            this.btnSetStartingMoney.TabIndex = 2;
+            this.btnSetStartingMoney.Text = "Set";
+            this.btnSetStartingMoney.UseVisualStyleBackColor = true;
+            this.btnSetStartingMoney.Click += new System.EventHandler(this.btnSetStartingMoney_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Starting Money";
+            // 
+            // txtStartingMoneyAmount
+            // 
+            this.txtStartingMoneyAmount.Location = new System.Drawing.Point(95, 20);
+            this.txtStartingMoneyAmount.Name = "txtStartingMoneyAmount";
+            this.txtStartingMoneyAmount.Size = new System.Drawing.Size(56, 20);
+            this.txtStartingMoneyAmount.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Times Passed Go";
+            // 
+            // txtTimesPassedGo
+            // 
+            this.txtTimesPassedGo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtTimesPassedGo.Location = new System.Drawing.Point(102, 46);
+            this.txtTimesPassedGo.Name = "txtTimesPassedGo";
+            this.txtTimesPassedGo.ReadOnly = true;
+            this.txtTimesPassedGo.Size = new System.Drawing.Size(37, 20);
+            this.txtTimesPassedGo.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 547);
+            this.ClientSize = new System.Drawing.Size(930, 547);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -248,6 +348,9 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,6 +375,15 @@
         private System.Windows.Forms.Button btnPayPlayer;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnSetStartingMoney;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtStartingMoneyAmount;
+        private System.Windows.Forms.Button btnSetPassGoAmount;
+        private System.Windows.Forms.TextBox txtPassGoAmount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnPassGo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTimesPassedGo;
     }
 }
 
