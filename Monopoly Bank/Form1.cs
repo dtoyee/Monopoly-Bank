@@ -202,22 +202,29 @@ namespace Monopoly_Bank
             // Check if the pass go amount is not empty
             if (setGoMoneyAmoutbox.ToString() != "")
             {
-                // Check if the pass go amount is not less than 0
-                if (!(int.Parse(setGoMoneyAmoutbox) < 0))
+                // Check and get the valid pass amount
+                if (int.TryParse(setGoMoneyAmoutbox, out passGoAmount))
                 {
-                    // Assign the pass go amount variable to the amount that was entered in the pass go amount text box
-                    passGoAmount = int.Parse(setGoMoneyAmoutbox);
-                    // Disable the pass go amount text box
-                    txtPassGoAmount.Enabled = false;
-                    // Disable the pass go amount button
-                    btnSetPassGoAmount.Enabled = false;
-                    // Write to the console what happened
-                    txtConsole.AppendText("Players will now get " + passGoAmount + " each time they pass go " + currentTime + "\n");
+                    // Make sure the pass amount is more than zero
+                    if (passGoAmount > 0)
+                    {
+                        // Disable the pass go amount text box
+                        txtPassGoAmount.Enabled = false;
+                        // Disable the pass go amount button
+                        btnSetPassGoAmount.Enabled = false;
+                        // Write to the console what happened
+                        txtConsole.AppendText("Players will now get " + passGoAmount + " each time they pass go " + currentTime + "\n");
+                    }
+                    else
+                    {
+                        // Display a message box with the error
+                        MessageBox.Show("The amount cannot be below 1!");
+                    }
                 }
                 else
                 {
                     // Display a message box with the error
-                    MessageBox.Show("The amount cannot be below 0!");
+                    MessageBox.Show("The amount is not valid!");
                 }
             }
             else

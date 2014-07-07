@@ -7,3 +7,12 @@ C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\o
 C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.csproj.GenerateResource.Cache
 C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.exe
 C:\Users\Jon\Documents\Visual Studio 2012\Projects\Monopoly Bank\Monopoly Bank\obj\Debug\Monopoly Bank.pdb
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\bin\Debug\Monopoly Bank.exe.config
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly Bank.exe
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly Bank.pdb
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\bin\Debug\Monopoly Bank.exe
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\bin\Debug\Monopoly Bank.pdb
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly Bank.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly_Bank.Form1.resources
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly_Bank.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\Monopoly-Bank\Monopoly Bank\obj\Debug\Monopoly Bank.csproj.GenerateResource.Cache
