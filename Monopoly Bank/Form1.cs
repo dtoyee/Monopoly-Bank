@@ -236,24 +236,20 @@ namespace Monopoly_Bank
         // Here we pay the player once the pass go
         private void btnPassGo_Click(object sender, EventArgs e)
         {
-            // Store the selected player in the list box as a variable
-            string selectedPlayer = lbPlayers.GetItemText(lbPlayers.SelectedItem);
-            // Loop through the player's in the player list
-            foreach (Player playerSelect in playerList)
+            // Retrieve the Player object for the currently selected player in the list
+            Player selectedPlayer = getPlayerData(lbPlayers.GetItemText(lbPlayers.SelectedItem));
+            // Make sure there is a player selected
+            if (selectedPlayer != null)
             {
                 // Check if the pass go amount is not equal to 0
-                if (!(passGoAmount == 0))
+                if (passGoAmount != 0)
                 {
-                    // Check if the selected player in the list box matches the player name in the player list
-                    if (selectedPlayer == playerSelect.playerName)
-                    {
-                        // Add the pass go amount to the player's account
-                        playerSelect.playerMoney += passGoAmount;
-                        // Add 1 to the player's pass go variable
-                        playerSelect.passedGo += 1;
-                        // Write to console what happened
-                        txtConsole.AppendText(selectedPlayer + " passed go! " + currentTime + "\n");
-                    }
+                    // Add the pass go amount to the player's account
+                    selectedPlayer.playerMoney += passGoAmount;
+                    // Add 1 to the player's pass go variable
+                    selectedPlayer.passedGo += 1;
+                    // Write to console what happened
+                    txtConsole.AppendText(selectedPlayer.playerName + " passed go! " + currentTime + "\n");
                 }
                 else
                 {
@@ -261,6 +257,18 @@ namespace Monopoly_Bank
                     MessageBox.Show("Did you forget to set the pass go amount?");
                 }
             }
+        }
+        private Player getPlayerData(string playerName)
+        {
+            // Loop through the player's in the player list
+            foreach (Player player in playerList)
+            {
+                if (player.playerName == playerName)
+                {
+                    return player;
+                }
+            }
+            return null;
         }
     }
 }
